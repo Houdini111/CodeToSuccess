@@ -2,14 +2,14 @@
 
 > An application to create my portfolio for the Code To Success program
 
-###Features
+### Features
 
 - Real time comments
 - Blog
 - Portfolio
 - Drag and drop interface  
  
-###Code Example
+### Code Example
 
 ```
 def my_method
