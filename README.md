@@ -1,24 +1,18 @@
 # Code To Success Portfio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> An application to create my portfolio for the Code To Success program
 
-Things you may want to cover:
+###Features
 
-* Ruby version
+- Real time comments
+- Blog
+- Portfolio
+- Drag and drop interface  
+ 
+###Code Example
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+def my_method
+  puts "here it is"
+end
+```
