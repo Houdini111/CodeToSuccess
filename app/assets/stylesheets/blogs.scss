@@ -180,20 +180,41 @@ Custom Styles
 }
 
 .card-block {
-  padding: 0.8rem;
+  padding: 0.5rem;
 }
 
 .comment-card > .card {
   margin-top: 15px;
 }
 
-.comment-name {
-  font-weight: 700;
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  box-shadow: 0px 0px 6px #CCCCCC;
+  margin-bottom: 10px;
 }
 
-.comment-attribution {
+.comment-name {
+  font-size: .8em;
+  text-align: center;
+  color: #656565;
+  display: block;
+  line-height: 125%;
+}
+
+.comment-time {
   font-size: 0.7em;
   font-style: italic;
   color: rgb(145, 145, 145);
-  padding-top: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+.comment-body {
+  padding-bottom: 20px;
+}
+
+.person-col {
+  border-right: 1px #C7C7C7 solid;
 }
