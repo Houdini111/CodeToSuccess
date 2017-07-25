@@ -32,18 +32,56 @@
       </div>
     </div>
     <div class="col-md-6 blog-edit-footer">
-      <%= f.radio_button :status, 'draft' %>
-      <%= f.label :status, 'Draft' %>
       
-      <%= f.radio_button :status, 'published' %>
-      <%= f.label :status, 'Published' %>
+      <%#= f.radio_button :status, 'draft' %>
+      <%#= f.label :status, 'Draft' %>
+      
+      <%#= f.radio_button :status, 'published' %>
+      <%#= f.label :status, 'Published' %>
+      
+      
+      
+      <!--<label class="publication-switch">-->
+        <%#= f.label :status, 'Published', :class=>"inner-text" %>
+        <!--<input type="checkbox">-->
+        <%#= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
+        <!--<span class="slider"></span>-->
+        <%#= blog.status %>
+      <!--</label> -->
+      
+      
+      <!--
+      <div class="switch">
+        <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+        <label for="cmn-toggle-1"></label>
+      </div>
+      
+      <div class="switch">
+        <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+        <label for="cmn-toggle-4"></label>
+      </div>
+      
+      <div class="switch">
+        <input id="cmn-toggle-7" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
+        <label for="cmn-toggle-7" data-on="Yes" data-off="No"></label>
+      </div>
+      -->
+      
+      
+      <!--<label class="publication-switch">-->
+        <!--<div class="switch-back">-->
+          <%#= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
+        <!--</div>-->
+       <!--</label>-->
+      
       
       <label class="publication-switch">
-        <%= f.label :status, 'Published', :class=>"inner-text" %>
-        <input type="checkbox">
-        <span class="slider"></span>
-        
-      </label>
+        <%= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
+        <div class="switch-top">
+          
+        </div>
+      </label> 
+      
     </div>
   </div>
 <% end %>
