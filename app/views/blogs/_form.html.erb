@@ -77,8 +77,10 @@
       
       <label class="publication-switch">
         <%= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
-        <div class="switch-top">
-          
+        <div class="switch-top"></div>
+        <div class="status-wrapper">
+          <span class="status-text" id="published">Published</span>
+          <span class="status-text" id="unpublished">Unpublished</span>
         </div>
       </label> 
       

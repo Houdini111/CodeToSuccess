@@ -285,33 +285,94 @@ Custom Styles
 
 
 //My Publication Switch
+
 .publication-switch {
   float: right;
+  width: 200px;
+  height: 42px;
 }
 
 .switch-top {
-  background-color: black;
-  position: absolute;
+  background-color: #76b7f0;
+  position: relative;
   width: 50px;
   height: 42px;
+  top: -42px;
+  border-radius: 0.25em;
+  border: 1px black;
 }
 
 .publication-switch input {
+  content: "";
+  color: black;
   -webkit-appearance: none;
-  position: absolute;
-  background-color: gray;
+  position: relative;
+  border-radius: 0.25em;
   width: 200px;
   height: 42px;
-  
+  float:right;
 }
 
-.publication-switch input:checked ~ .switch-top {
-  background-color: white;
+.publication-switch input:checked {
+  content: "Published";
+  background-color: #4fa7f2;
+  transition: all 0.3s;
 }
 
-.publication-switch input:not(:checked) ~ .switch-top {
-  background-color: black;
+.publication-switch input:not(:checked) {
+  content: "Unpublished";
+  background-color: #deeffe;
+  transition: all 0.3s;
 }
+
+
+.publication-switch input:checked + .switch-top{
+  background-color: #0275d8;
+  float: right;
+  transition: all 0.3s;
+}
+
+.publication-switch input:not(:checked) + .switch-top{
+  background-color: #76b7f0;
+  float: left;
+  transition: all 0.3s;
+}
+
+
+.status-wrapper {
+  width: 200px;
+  height: 42px;
+  position: absolute;
+}
+
+.status-text {
+  position: relative;
+  display: block;
+  mix-blend-mode: difference;
+  top: 15%;
+}
+
+#published {
+  left: 20%;
+}
+#unpublished {
+  left: 35%;
+}
+
+.publication-switch input:not(:checked) + .switch-top + .status-wrapper #published {
+  display: none;
+}
+.publication-switch input:not(:checked) + .switch-top + .status-wrapper #unpublished {
+  display: block;
+}
+
+.publication-switch input:checked + .switch-top + .status-wrapper #published {
+  display: block;
+}
+.publication-switch input:checked + .switch-top + .status-wrapper #unpublished {
+  display: none;
+}
+
 
 /*
 .publication-switch input {
