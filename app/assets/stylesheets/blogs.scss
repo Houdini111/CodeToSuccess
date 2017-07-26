@@ -222,70 +222,7 @@ Custom Styles
 
 
 
-
-
-//My published status
-/*
-.publication-switch {
-  float: right;
-}
-
-.publication-switch input {
-  -webkit-appearance: none;
-	//background-color: #FF0000;
-	border: 1px solid #cacece;
-	padding: 9px;
-	border-radius: 3px;
-	height: 42px;
-	//width: 220px;
-}
-
-
-.publication-switch input:checked {
-  background-color: #36b82e;
-  transition: background-color 0.5s;
-}
-
-
-.publication-switch input:not(:checked) {
-  background-color: #ececec;
-  transition: background-color 0.5s;
-}
-
-.publication-switch input:checked:before {
-  float: left;
-  content: "Published";  
-  position: relative;
-  color: white;
-  opacity: 1;
-  transition: opacity 5s;
-}
-.publication-switch input:not(:checked):before {
-  opacity: 0;
-  transition: opacity 5s
-}
-
-
-.publication-switch input:not(:checked):after {
-  float: right;
-  content: "Unpublished";
-  position: relative;
-  color: black;
-  opacity: 1;
-  transition: opacity 5s;
-}
-.publication-switch input:checked:after {
-  opacity: 0;
-  transition: opacity 5s;
-}
-*/
-
-
-
-
-
 //My Publication Switch
-
 .publication-switch {
   float: right;
   width: 200px;
@@ -338,7 +275,6 @@ Custom Styles
   transition: all 0.3s;
 }
 
-
 .status-wrapper {
   width: 200px;
   height: 42px;
@@ -350,6 +286,7 @@ Custom Styles
   display: block;
   mix-blend-mode: difference;
   top: 15%;
+  color: #555555;
 }
 
 #published {
@@ -372,55 +309,3 @@ Custom Styles
 .publication-switch input:checked + .switch-top + .status-wrapper #unpublished {
   display: none;
 }
-
-
-/*
-.publication-switch input {
-  -webkit-appearance: none;
-	background-color: #FF0000;
-	border: 1px solid #cacece;
-	padding: 9px;
-	border-radius: 3px;
-	height: 42px;
-	width: 220px;
-}
-
-
-.publication-switch input:checked {
-  background-color: #36b82e;
-  transition: background-color 0.5s;
-}
-
-
-.publication-switch input:not(:checked) {
-  background-color: #ececec;
-  transition: background-color 0.5s;
-}
-
-.publication-switch input:checked:before {
-  float: left;
-  content: "Published";  
-  position: absolute;
-  color: white;
-  opacity: 1;
-  transition: opacity 5s;
-}
-.publication-switch input:not(:checked):before {
-  opacity: 0;
-  transition: opacity 5s
-}
-
-
-.publication-switch input:not(:checked):after {
-  float: right;
-  content: "Unpublished";
-  position: relative;
-  color: black;
-  opacity: 1;
-  transition: opacity 5s;
-}
-.publication-switch input:checked:after {
-  opacity: 0;
-  transition: opacity 5s;
-}
-*/
