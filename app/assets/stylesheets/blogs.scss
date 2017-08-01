@@ -2,6 +2,18 @@
 @import "font-awesome";
 @import "gritter";
 
+
+@font-face {
+  font-family: 'Raleway';
+  src:font-url('Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:font-url('Roboto-Regular.ttf');
+}
+
+
 /*
  * Globals
  */
@@ -26,7 +38,27 @@ h6, .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
+  font-family: 'Roboto', sans-serif;
 }
+
+//////////////
+//CUSTOM CSS//
+//////////////
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, .h1, 
+h2, .h2, 
+h3, .h3,
+h4, .h4, 
+h5, .h5, 
+h6, .h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 
 
 /*
@@ -180,20 +212,145 @@ Custom Styles
 }
 
 .card-block {
-  padding: 0.8rem;
+  padding: 0.5rem;
 }
 
 .comment-card > .card {
   margin-top: 15px;
 }
 
-.comment-name {
-  font-weight: 700;
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  box-shadow: 0px 0px 6px #CCCCCC;
+  margin-bottom: 10px;
 }
 
-.comment-attribution {
+.comment-name {
+  font-size: .7em;
+  text-align: center;
+  color: #656565;
+  display: block;
+  line-height: 125%;
+}
+
+.comment-time {
   font-size: 0.7em;
   font-style: italic;
   color: rgb(145, 145, 145);
-  padding-top: 8px;
+  position: absolute;
+  bottom: 0;
+}
+
+.comment-body {
+  padding-bottom: 20px;
+}
+
+.person-col {
+  border-right: 1px #C7C7C7 solid;
+}
+
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.blog-sidebar-source {
+  margin-top: 20px;
+}
+
+
+//My Publication Switch
+.publication-switch {
+  float: right;
+  width: 200px;
+  height: 42px;
+}
+
+.switch-top {
+  background-color: #76b7f0;
+  position: relative;
+  width: 50px;
+  height: 42px;
+  top: -42px;
+  border-radius: 0.25em;
+  border: 1px black;
+}
+
+.publication-switch input {
+  content: "";
+  color: black;
+  -webkit-appearance: none;
+  position: relative;
+  border-radius: 0.25em;
+  width: 200px;
+  height: 42px;
+  float:right;
+}
+
+.publication-switch input:checked {
+  content: "Published";
+  background-color: #4fa7f2;
+  transition: all 0.3s;
+}
+
+.publication-switch input:not(:checked) {
+  content: "Unpublished";
+  background-color: #deeffe;
+  transition: all 0.3s;
+}
+
+
+.publication-switch input:checked + .switch-top{
+  background-color: #0275d8;
+  float: right;
+  transition: all 0.3s;
+}
+
+.publication-switch input:not(:checked) + .switch-top{
+  background-color: #76b7f0;
+  float: left;
+  transition: all 0.3s;
+}
+
+.status-wrapper {
+  width: 200px;
+  height: 42px;
+  position: absolute;
+}
+
+.status-text {
+  position: relative;
+  display: block;
+  mix-blend-mode: difference;
+  top: 15%;
+  color: #555555;
+}
+
+#published {
+  left: 20%;
+}
+#unpublished {
+  left: 35%;
+}
+
+.publication-switch input:not(:checked) + .switch-top + .status-wrapper #published {
+  display: none;
+}
+.publication-switch input:not(:checked) + .switch-top + .status-wrapper #unpublished {
+  display: block;
+}
+
+.publication-switch input:checked + .switch-top + .status-wrapper #published {
+  display: block;
+}
+.publication-switch input:checked + .switch-top + .status-wrapper #unpublished {
+  display: none;
 }

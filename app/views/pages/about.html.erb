@@ -1,14 +1,103 @@
-<h1>About Me</h1>
-
-<hr>
-
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "Logo V3-Crop.png", width: 300, alt: "Houdini 1 1 1 logo" %>
-  </div>
-  
-  <div class="col-md-8">
-    <p>I'm Alexander Fenton, or just Alex for short.</p>
-    <p>I'm attending Weber State University right now, working towards my Bachelor's Degree in Computer Science. </p>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
+    
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "Logo V3-Crop.png", width: 300, alt: "Houdini 1 1 1 logo", class: "profile-pic" %>
+        
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <h4><%= skill.title %></h4>
+            <div class="skill">
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-info"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="col-md-8">
+        <p>I'm Alexander Fenton, or just Alex for short.</p>
+        <p>I'm attending Weber State University right now, working towards my Bachelor's Degree in Computer Science. </p>
+      
+        <p>
+          <button 
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          > Job History </button>
+        </p>
+        
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              <p>Newspaper Delivery for Standard Examiner</p>
+              <p>2005 - 2015</p>
+              <p>Deliver newspapers to porch (or otherwise designated area) in good condition by 6:30 AM every morning.</p>
+            </div>
+            <div class="card card-block">
+              <p>Computer Science Tutor for Weber State University</p>
+              <p>August 2016 - Current</p>
+              <p>Assist students with their Computer Science class problems. This includes programming concepts, methods, and debugging. </p>
+            </div>
+            <div class="card card-block">
+              <p>Computer Science Teacher's Assistant for Weber State University</p>
+              <p>Fall 2016</p>
+              <p>Test student code, check for errors, and award points based  soundness of code logic and understanding of the task. </p>
+            </div>
+            <div class="card card-block">
+              <p>Mentor for Simply Coding</p>
+              <p>Summer 2017</p>
+              <p>Help teenage students with ciriculum related problems for both the Javascript and Minecraft modding (Java) courses.</p>
+            </div>
+            <div class="card card-block">
+              <p>College Mentor for Code To Success</p>
+              <p>Summer 2017</p>
+              <p>Help high school students with Rails problems, both on location and across the state online.</p>
+            </div>
+          </div>
+        </p>
+        
+        
+        <p>
+          <button 
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          > Education </button>
+        </p>
+        
+        <p>
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              <p>Weber High School</p>
+              <p>Fall 2012 - Spring 2015</p>
+              <p>Obtained high school diploma.</p>
+            </div>
+            <div class="card card-block">
+              <p>Weber State University</p>
+              <p>Fall 2017 - Current</p>
+              <o>Obtained Associate's Degree in Computer Science, working towards Bachelor's Degree.</o>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

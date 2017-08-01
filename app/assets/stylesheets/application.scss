@@ -1,6 +1,18 @@
 @import "bootstrap";
 @import "gritter";
 
+
+@font-face {
+  font-family: 'Raleway';
+  src:font-url('Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:font-url('Roboto-Regular.ttf');
+}
+
+
 /*
  * Globals
  */
@@ -165,6 +177,21 @@ body {
 /*
  * Custom Styles
  */
+ 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+ 
+h1, .h1, 
+h2, .h2, 
+h3, .h3,
+h4, .h4, 
+h5, .h5, 
+h6, .h6 {
+  font-family: 'Roboto', sans-serif;
+}
+ 
+ 
 .card-block {
   color: black;
   text-align: left;
@@ -222,4 +249,37 @@ body {
 
 .tech-news > .card {
   padding: 30px;
+}
+
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.profile-img {
+  border: 1px solid grey;
+}
+
+.app-card-container a {
+  color: #3f77ff;
+}
+
+
+.profile-pic {
+  border: 1px solid gray;
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skill {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }

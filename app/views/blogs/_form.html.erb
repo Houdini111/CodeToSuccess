@@ -10,10 +10,80 @@
   </div>
 
   <div class="form-group">
-    <%= f.text_area :body, class: 'form-control', rows: 15, placeholder: "Content" %>
+    <%= f.label :topic_id %>
+    <%= f.collection_select(:topic_id, Topic.all, :id, :title,
+                              {
+                                selected: blog.topic.id,
+                                include_blank: true
+                              },
+                              class: 'form-control'
+                            )
+    %>
   </div>
 
   <div class="form-group">
-    <%= f.submit "Submit", class: 'btn btn-primary' %>
+    <%= f.text_area :body, class: 'form-control', rows: 15, placeholder: "Content" %>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 blog-edit-footer">
+      <div class="form-group ">
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+      </div>
+    </div>
+    <div class="col-md-6 blog-edit-footer">
+      
+      <%#= f.radio_button :status, 'draft' %>
+      <%#= f.label :status, 'Draft' %>
+      
+      <%#= f.radio_button :status, 'published' %>
+      <%#= f.label :status, 'Published' %>
+      
+      
+      
+      <!--<label class="publication-switch">-->
+        <%#= f.label :status, 'Published', :class=>"inner-text" %>
+        <!--<input type="checkbox">-->
+        <%#= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
+        <!--<span class="slider"></span>-->
+        <%#= blog.status %>
+      <!--</label> -->
+      
+      
+      <!--
+      <div class="switch">
+        <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+        <label for="cmn-toggle-1"></label>
+      </div>
+      
+      <div class="switch">
+        <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+        <label for="cmn-toggle-4"></label>
+      </div>
+      
+      <div class="switch">
+        <input id="cmn-toggle-7" class="cmn-toggle cmn-toggle-yes-no" type="checkbox">
+        <label for="cmn-toggle-7" data-on="Yes" data-off="No"></label>
+      </div>
+      -->
+      
+      
+      <!--<label class="publication-switch">-->
+        <!--<div class="switch-back">-->
+          <%#= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
+        <!--</div>-->
+       <!--</label>-->
+      
+      
+      <label class="publication-switch">
+        <%= f.check_box :status, {:class => "checkbox"}, 'published', 'draft' %>
+        <div class="switch-top"></div>
+        <div class="status-wrapper">
+          <span class="status-text" id="published">Published</span>
+          <span class="status-text" id="unpublished">Unpublished</span>
+        </div>
+      </label> 
+      
+    </div>
   </div>
 <% end %>
