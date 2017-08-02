@@ -192,6 +192,27 @@ h6, .h6 {
 }
  
  
+.masthead {
+  background-color: rgba(100, 100, 100, 0.5);
+  padding-bottom: 1px;
+  border-radius: 0px 0px 5px 5px;
+  z-index: 10;
+} 
+
+.masthead .inner {
+  padding: 1.5em;
+}
+
+.mastfoot {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.mastfoot .inner {
+  padding: 1.1em; 
+}
+ 
+ 
 .card-block {
   color: black;
   text-align: left;
@@ -255,6 +276,8 @@ h6, .h6 {
 .app-card-container {
   color: black;
   text-align: left;
+  margin-top: 62px;
+  margin-bottom: 75px;
 }
 
 .app-card-container > .card {
@@ -272,6 +295,8 @@ h6, .h6 {
 
 .profile-pic {
   border: 1px solid gray;
+  
+  margin-bottom: 15px;
 }
 
 .card-block {
@@ -279,7 +304,28 @@ h6, .h6 {
   margin-bottom: 5px;
 }
 
-.skill {
-  margin-top: 10px;
-  margin-bottom: 5px;
+
+
+
+.edit-button {
+  float: right;
+}
+
+.edit-text { 
+  font-size: 0.7em;  
+}
+
+
+
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+  
+.nav-masthead .active {
+  color: rgba(255, 255, 255, 0.9)
 }
