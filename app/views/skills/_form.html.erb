@@ -1,0 +1,29 @@
+<div class="app-card-container edit-skill">
+  <div class="card">
+    <%= form_for(skill) do |s| %>
+      <% if skill.errors.any? %>
+        <% skill.errors.full_messages.each do |error| %>
+          <%= alert_generator error %>
+        <% end %>
+      <% end %>
+    
+      <div class="form-group">
+        <%= s.label :title, 'Skill Name:' %>
+        <%= s.text_field :title, class: 'form-control', placeholder: "Title" %>
+      </div>
+      
+      <div class="form-group">
+        <%= s.label :percent_utilized, 'Skill Amount:' %>
+        <%= s.number_field :percent_utilized, class: 'form-control', placeholder: "0" %>
+      </div>
+      
+      <% unless (skill.title.nil? or skill.percent_utilized.nil?) %>
+        <%= link_to "Delete", skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-danger delete-skill' %>
+      <% end %>
+      
+      <div class="form-group ">
+        <%= s.submit "Submit", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

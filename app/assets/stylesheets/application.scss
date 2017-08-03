@@ -46,7 +46,7 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  //text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -330,3 +330,36 @@ h6, .h6 {
   color: rgba(255, 255, 255, 0.9)
 }
 
+
+
+#jobHistory .card-block {
+  padding: 3.5%;
+}
+
+.card-block .title {
+  font-weight: bold;
+  font-size: 1.175em;
+  color: #303030;
+  margin-bottom: 1px;
+}
+
+.card-block .date {
+  font-style: italic;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.card-block .description {
+  margin-bottom: 0;
+}
+
+
+.edit-skill {
+  width: 50%;
+  margin: auto;
+}
+
+.edit-skill .card .delete-skill {
+  color: white;
+  float: right;
+}

@@ -1,7 +1,6 @@
 <div class="app-card-container">
   <div class="card">
     <h1>About Me</h1>
-    
     <hr>
     
     <div class="row">
@@ -10,7 +9,17 @@
         
         <div class="skills">
           <% @skills.each do |skill| %>
-            <h4><%= skill.title %></h4>
+            <div class="row">
+              <div class="col-md-9">
+                <h4><%= skill.title %></h4>
+              </div>
+              <div class="col-md-3">
+                <% if logged_in?(:site_admin) %>
+                  <%= button_to('EDIT', edit_skill_path(skill), method: "get", :class => "btn btn-warning btn-sm edit-button") %>
+                <% end %>
+              </div>
+            </div>
+
             <div class="skill">
               <div class="progress">
                 <div 
@@ -21,8 +30,11 @@
                   style="width: <%= skill.percent_utilized %>%"
                 ></div>
               </div>
+            <hr/>
             </div>
           <% end %>
+          
+          <%= button_to('ADD SKILL', new_skill_path, method: "get", :class => "btn btn-warning btn-sm edit-button") %>
         </div>
       </div>
       
@@ -30,6 +42,8 @@
         <p>I'm Alexander Fenton, or just Alex for short.</p>
         <p>I'm attending Weber State University right now, working towards my Bachelor's Degree in Computer Science. </p>
       
+        <hr/>
+        
         <p>
           <button 
             class="btn btn-primary"
@@ -44,29 +58,33 @@
         <p>
           <div class="collapse" id="jobHistory">
             <div class="card card-block">
-              <p>Newspaper Delivery for Standard Examiner</p>
-              <p>2005 - 2015</p>
-              <p>Deliver newspapers to porch (or otherwise designated area) in good condition by 6:30 AM every morning.</p>
+              <p class="title">Newspaper Delivery for Standard Examiner</p>
+              <p class="date">2005 - 2015</p>
+              <p class="description">Deliver newspapers to porch (or otherwise designated area) in good condition by 6:30 AM every morning.</p>
             </div>
+            
             <div class="card card-block">
-              <p>Computer Science Tutor for Weber State University</p>
-              <p>August 2016 - Current</p>
-              <p>Assist students with their Computer Science class problems. This includes programming concepts, methods, and debugging. </p>
+              <p class="title">Computer Science Tutor for Weber State University</p>
+              <p class="date">August 2016 - Current</p>
+              <p class="description">Assist students with their Computer Science class problems. This includes programming concepts, methods, and debugging. </p>
             </div>
+            
             <div class="card card-block">
-              <p>Computer Science Teacher's Assistant for Weber State University</p>
-              <p>Fall 2016</p>
-              <p>Test student code, check for errors, and award points based  soundness of code logic and understanding of the task. </p>
+              <p class="title">Computer Science Teacher's Assistant for Weber State University</p>
+              <p class="date">Fall 2016</p>
+              <p class="description">Test student code, check for errors, and award points based  soundness of code logic and understanding of the task. </p>
             </div>
+            
             <div class="card card-block">
-              <p>Mentor for Simply Coding</p>
-              <p>Summer 2017</p>
-              <p>Help teenage students with ciriculum related problems for both the Javascript and Minecraft modding (Java) courses.</p>
+              <p class="title">Mentor for Simply Coding</p>
+              <p class="date">Summer 2017</p>
+              <p class="description">Help teenage students with ciriculum related problems for both the Javascript and Minecraft modding (Java) courses.</p>
             </div>
+            
             <div class="card card-block">
-              <p>College Mentor for Code To Success</p>
-              <p>Summer 2017</p>
-              <p>Help high school students with Rails problems, both on location and across the state online.</p>
+              <p class="title">College Mentor for Code To Success</p>
+              <p class="date">Summer 2017</p>
+              <p class="description">Help high school students with Rails problems, both on location and across the state online.</p>
             </div>
           </div>
         </p>
@@ -86,14 +104,14 @@
         <p>
           <div class="collapse" id="education">
             <div class="card card-block">
-              <p>Weber High School</p>
-              <p>Fall 2012 - Spring 2015</p>
-              <p>Obtained high school diploma.</p>
+              <p class="title">Weber High School</p>
+              <p class="date">Fall 2012 - Spring 2015</p>
+              <p class="description">Obtained high school diploma.</p>
             </div>
             <div class="card card-block">
-              <p>Weber State University</p>
-              <p>Fall 2017 - Current</p>
-              <o>Obtained Associate's Degree in Computer Science, working towards Bachelor's Degree.</o>
+              <p class="title">Weber State University</p>
+              <p class="date">Fall 2017 - Current</p>
+              <p class="description">Obtained Associate's Degree in Computer Science, working towards Bachelor's Degree.</p>
             </div>
           </div>
         </p>
